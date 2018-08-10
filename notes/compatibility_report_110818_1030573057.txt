@@ -1,0 +1,44 @@
+Converting GML script: ${project_dir}\scripts\gpu_noise_create\gpu_noise_create.gml
+Converted description /// @description  gpu_noise_create(noisetype, seed, width, height);/// @param noisetype
+/// @param  seed
+/// @param  width
+/// @param  height
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_create_ext\gpu_noise_create_ext.gml
+Converted description /// @description  gpu_noise_create_ext(noisetype, seed, width, height, persistence, frequency, scale);/// @param noisetype
+/// @param  seed
+/// @param  width
+/// @param  height
+/// @param  persistence
+/// @param  frequency
+/// @param  scale
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_1d\gpu_noise_1d.gml
+Converted description /// @description  gpu_noise_1d(noise_object, x);/// @param noise_object
+/// @param  x
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_2d\gpu_noise_2d.gml
+Converted description /// @description  gpu_noise_2d(noise_object, x, y);/// @param noise_object
+/// @param  x
+/// @param  y
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_3d\gpu_noise_3d.gml
+Converted description /// @description  gpu_noise_3d(noise_object, x, y, z);/// @param noise_object
+/// @param  x
+/// @param  y
+/// @param  z
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_offset\gpu_noise_offset.gml
+Converted description /// @description  gpu_noise_offset(noise_object, x, [y, z]);/// @param noise_object
+/// @param  x
+/// @param  [y
+/// @param  z]
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_to_surface\gpu_noise_to_surface.gml
+Converted description /// @description  gpu_noise_to_surface(noise_object);/// @param noise_object
+
+Converting GML script: ${project_dir}\scripts\gpu_noise_free\gpu_noise_free.gml
+Converted description /// @description  gpu_noise_free(noıse_object);/// @param noıse_object
+
+Converting GML script: ${project_dir}\scripts\_gpu_noise_calculate\_gpu_noise_calculate.gml
+Converted description /// @description  gpu_noise_calculate(noise_object);/// @param noise_object
