@@ -99,5 +99,6 @@ if(first_step)
 	var eY = (room_height / 2);
 	
 	world_explode(eX, eY, 5);
+	instance_create_depth(eX, eY, 1, oPlayer);
 	
 }
