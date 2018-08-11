@@ -55,4 +55,24 @@ if(mouse_check_button(mb_left))
 			}
 		}
 	}
+	else if(inventory_get_item(inventory, selected_inventory) == Items.COAL)
+	{
+		var furnace = instance_place(mouse_x, mouse_y, oFurnace);
+		if(furnace != noone && point_distance(x, y, furnace.x, furnace.y) < 70)
+		{
+			furnace.onTicks = 4000;
+			inventory_set_item(inventory, selected_inventory, noone);
+		}
+	}
+}
+
+if(keyboard_check_pressed(ord("Q")))
+{
+	var curr = inventory_get_item(inventory, selected_inventory);
+	if(curr != noone)
+	{
+		var item = spawn_item_entity(x, y, 0, curr);
+		item.pickup_delay = 60;
+		inventory_set_item(inventory, selected_inventory, noone);
+	}
 }

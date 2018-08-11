@@ -215,11 +215,27 @@
             }
         },
         {
+            "Key": "2d58f1a5-a928-418e-b340-ed7811d84eb8",
+            "Value": {
+                "id": "fe625997-ebcc-4a97-83e8-53eac31a52fe",
+                "resourcePath": "objects\\oFurnace\\oFurnace.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "3093b126-d238-4b86-9e95-6628e636de70",
             "Value": {
                 "id": "5fdda17d-f118-4d7f-b11f-35a2d346dcdd",
                 "resourcePath": "views\\3093b126-d238-4b86-9e95-6628e636de70.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "316a6e73-8707-4883-974d-bf79ee882f33",
+            "Value": {
+                "id": "00e81b13-044c-4da2-b4a7-40f1d9893621",
+                "resourcePath": "sprites\\sFurnace\\sFurnace.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -540,6 +556,14 @@
                 "id": "b85bdbc6-5638-45bd-9de4-b448299e72a9",
                 "resourcePath": "notes\\compatibility_report_110818_102907297.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "9568349c-0996-49d4-ad66-0d4a465d0ccc",
+            "Value": {
+                "id": "a62672f1-95a6-4092-bba0-0169e2f81c34",
+                "resourcePath": "sprites\\sFurnaceOn\\sFurnaceOn.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

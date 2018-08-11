@@ -8,3 +8,5 @@ item.image_index = argument3;
 
 item.draw_xscale = 0.5;
 item.draw_yscale = 1.5;
+
+return item;

@@ -4,7 +4,7 @@ if(keyboard_check_pressed(vk_enter))
 }
 
 if(keyboard_check_pressed(vk_alt))
-	instance_create_depth(mouse_x, mouse_y, -2, oMinerBot);
+	instance_create_depth(mouse_x, mouse_y, -2, oFurnace);
 
 var cam_offset_x = 0;
 var cam_offset_y = 0;

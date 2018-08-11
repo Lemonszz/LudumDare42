@@ -12,13 +12,19 @@ var item = noone;
 
 switch(tile)
 {
-	case 0:
+	case Blocks.AIR:
 	break;
-	case 1:
+	case Blocks.STONE:
 	item = Items.STONE;
 	break;
-	case 2:
+	case Blocks.COAL:
 	item = Items.COAL;
+	break;
+	case Blocks.GOLD:
+	item = Items.GOLD_ORE;
+	break;
+	case Blocks.IRON:
+	item = Items.IRON_ORE;
 	break;
 	
 }

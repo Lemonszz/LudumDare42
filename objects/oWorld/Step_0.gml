@@ -78,9 +78,14 @@ for(var xx = min_x; xx < max_x; xx++)
 					{
 						var nx = ((nC.posX * CHUNK_SIZE) + _xx);
 						var ny = ((nC.posY * CHUNK_SIZE) + _yy);
-						var oreNoise = gpu_noise_2d(ore_noise, nx, ny);
-						if(oreNoise > 0.6 || oreNoise < 0.2)
-							nC.tiles[# _xx, _yy] = 2;
+						var oreNoise = gpu_noise_2d(ore_noise, nx, ny) * 10;
+						if(oreNoise < 4)
+							nC.tiles[# _xx, _yy] = Blocks.COAL;
+							
+						if(oreNoise > 7)
+							nC.tiles[# _xx, _yy] = Blocks.GOLD;
+						if(oreNoise > 4 && oreNoise < 5)
+							nC.tiles[# _xx, _yy] = Blocks.IRON;
 					}
 				}
 			
@@ -102,7 +107,6 @@ for(var xx = min_x; xx < max_x; xx++)
 		}
 	}
 }
-
 
 if(first_step)
 {

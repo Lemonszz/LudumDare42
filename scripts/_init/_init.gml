@@ -7,5 +7,15 @@
 enum Items{
 	PICKAXE,
 	STONE,
-	COAL
+	COAL,
+	GOLD_ORE,
+	IRON_ORE
+}
+
+enum Blocks{
+	AIR,
+	STONE,
+	COAL,
+	GOLD,
+	IRON
 }
