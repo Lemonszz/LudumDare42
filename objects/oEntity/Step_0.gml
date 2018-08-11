@@ -11,9 +11,9 @@ if(hsp < 0)
 if(vsp < 0)
 	check_y = bbox_top;
 
-if (world_get_tile((check_x+hsp) / TILE_SIZE,y / TILE_SIZE) != 0)
+if (world_get_tile((check_x+hsp) / TILE_SIZE, bbox_top / TILE_SIZE) != 0)
 {
-	while(world_get_tile((check_x + sign(hsp)) / TILE_SIZE, y / TILE_SIZE) == 0)
+	while(world_get_tile((check_x + sign(hsp)) / TILE_SIZE, bbox_top / TILE_SIZE) == 0)
     {
         x += sign(hsp);
 		var check_x = bbox_right;
@@ -22,11 +22,24 @@ if (world_get_tile((check_x+hsp) / TILE_SIZE,y / TILE_SIZE) != 0)
     }
     hsp = 0;
 }
+
+if (world_get_tile((check_x+hsp) / TILE_SIZE, bbox_bottom / TILE_SIZE) != 0)
+{
+	while(world_get_tile((check_x + sign(hsp)) / TILE_SIZE, bbox_bottom / TILE_SIZE) == 0)
+    {
+        x += sign(hsp);
+		var check_x = bbox_right;
+		if(hsp < 0)
+			check_x = bbox_left;
+    }
+    hsp = 0;
+}
+
 x += hsp;
 
-if (world_get_tile(x / TILE_SIZE, (check_y + vsp) / TILE_SIZE) != 0)
+if (world_get_tile(bbox_left / TILE_SIZE, (check_y + vsp) / TILE_SIZE) != 0)
 {
-    while(world_get_tile(x / TILE_SIZE, (check_y + sign(vsp)) / TILE_SIZE) == 0)
+    while(world_get_tile(bbox_left / TILE_SIZE, (check_y + sign(vsp)) / TILE_SIZE) == 0)
     {
         y += sign(vsp);
 		var check_y = bbox_bottom;
@@ -36,4 +49,17 @@ if (world_get_tile(x / TILE_SIZE, (check_y + vsp) / TILE_SIZE) != 0)
     }
     vsp = 0;
 }
+if (world_get_tile(bbox_right / TILE_SIZE, (check_y + vsp) / TILE_SIZE) != 0)
+{
+    while(world_get_tile(bbox_right / TILE_SIZE, (check_y + sign(vsp)) / TILE_SIZE) == 0)
+    {
+        y += sign(vsp);
+		var check_y = bbox_bottom;
+		if(vsp < 0)
+			check_y = bbox_top;
+
+    }
+    vsp = 0;
+}
+
 y += vsp;

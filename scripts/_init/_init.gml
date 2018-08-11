@@ -2,3 +2,10 @@
 #macro TILE_SIZE 24
 #macro CHUNK_TILE_SIZE 240
 #macro WORLD_SIZE_CHUNKS 100
+
+
+enum Items{
+	PICKAXE,
+	STONE,
+	COAL
+}

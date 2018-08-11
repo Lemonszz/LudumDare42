@@ -72,6 +72,18 @@ for(var xx = min_x; xx < max_x; xx++)
 				nC.posY = yy;
 				ds_grid_set_region(nC.tiles, 0, 0, CHUNK_SIZE, CHUNK_SIZE, 1);
 			
+				for(var _xx = 0; _xx < CHUNK_SIZE; _xx++)
+				{
+					for(var _yy = 0; _yy < CHUNK_SIZE; _yy++)
+					{
+						var nx = ((nC.posX * CHUNK_SIZE) + _xx);
+						var ny = ((nC.posY * CHUNK_SIZE) + _yy);
+						var oreNoise = gpu_noise_2d(ore_noise, nx, ny);
+						if(oreNoise > 0.6 || oreNoise < 0.2)
+							nC.tiles[# _xx, _yy] = 2;
+					}
+				}
+			
 				chunks[# xx, yy] = nC;
 				ds_list_add(chunks_loaded, nC);
 				
