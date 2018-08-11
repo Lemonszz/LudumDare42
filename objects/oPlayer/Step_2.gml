@@ -66,6 +66,11 @@ if(mouse_check_button(mb_left))
 	}
 }
 
+if(keyboard_check_released(ord("C")))
+{
+	instance_create_depth(0, 0, -99999, oCraftingMenu);	
+}
+
 if(keyboard_check_pressed(ord("Q")))
 {
 	var curr = inventory_get_item(inventory, selected_inventory);

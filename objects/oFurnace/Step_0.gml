@@ -7,17 +7,17 @@ if(onTicks > 0)
 	{
 		//swap	
 	}
-	if(age % 40 == 0)
+	if(age % 10 == 0)
 	{
-		if(target_xscale == 1.5)
+		if(target_xscale == 1.15)
 		{
 				target_xscale = 1;
 				target_yscale = 1;
 		}
 		else
 		{
-			target_xscale = 1.5
-			target_yscale = 0.5;
+			target_xscale = 1.15
+			target_yscale = 0.85;
 		}
 	}
 }
@@ -30,3 +30,5 @@ else
 }
 
 age++;
+
+event_inherited();

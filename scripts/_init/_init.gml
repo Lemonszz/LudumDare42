@@ -9,7 +9,8 @@ enum Items{
 	STONE,
 	COAL,
 	GOLD_ORE,
-	IRON_ORE
+	IRON_ORE,
+	FURNACE
 }
 
 enum Blocks{
@@ -19,3 +20,6 @@ enum Blocks{
 	GOLD,
 	IRON
 }
+
+global.crafting = ds_list_create();
+ds_list_add(global.crafting, [Items.FURNACE, [Items.STONE, Items.STONE, Items.STONE, Items.STONE, Items.STONE]]);
