@@ -1,5 +1,5 @@
 if(!surface_exists(chunk_surf))
-	chunk_surf = surface_create(CHUNK_TILE_SIZE + drawOffset, CHUNK_TILE_SIZE + drawOffset);
+	chunk_surf = surface_create(CHUNK_TILE_SIZE, CHUNK_TILE_SIZE);
 	
 if(redraw)
 {
@@ -26,4 +26,3 @@ if(redraw)
 }
 
 draw_surface(chunk_surf, CHUNK_TILE_SIZE * posX, CHUNK_TILE_SIZE * posY);
-

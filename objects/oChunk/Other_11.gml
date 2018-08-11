@@ -10,8 +10,8 @@ for(var xx = 0; xx < CHUNK_SIZE; xx++)
 		var val = gpu_noise_2d(oWorld.world_noise, floor(gX), floor(gY));
 		var blend = merge_color($2e1913, val * 255, 0.25);
 		
-		var dX = (CHUNK_DRAW_OFFSET / 2) + (xx * TILE_SIZE);
-		var dY = (CHUNK_DRAW_OFFSET / 2) + (yy * TILE_SIZE);
+		var dX = floor(xx * TILE_SIZE);
+		var dY = floor(yy * TILE_SIZE);
 		draw_world_tile(tiles[# xx, yy], dX, dY, blend); 	
 	}
 }
