@@ -855,6 +855,14 @@
             }
         },
         {
+            "Key": "c9909c7c-ac7d-4138-82e4-d472e513fd50",
+            "Value": {
+                "id": "7199fb8a-08e7-4c58-8a75-63904851c336",
+                "resourcePath": "sounds\\hit2\\hit2.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "c9dab987-30f4-4a5c-a7cb-110a545955fc",
             "Value": {
                 "id": "82a21d3a-40f8-4722-81f9-b6fec60a5532",
