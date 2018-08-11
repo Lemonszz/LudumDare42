@@ -20,7 +20,9 @@ pick_use_cooldown--;
 
 if(mouse_check_button(mb_left))
 {
-	if(inventory_get_item(inventory, selected_inventory) == Items.PICKAXE)
+	var usedItem = inventory_get_item(inventory, selected_inventory);
+	
+	if(usedItem == Items.PICKAXE)
 	{
 		if(pick_use_cooldown <= 0)
 		{
@@ -55,7 +57,7 @@ if(mouse_check_button(mb_left))
 			}
 		}
 	}
-	else if(inventory_get_item(inventory, selected_inventory) == Items.COAL)
+	else if(usedItem == Items.COAL)
 	{
 		var furnace = instance_place(mouse_x, mouse_y, oFurnace);
 		if(furnace != noone && point_distance(x, y, furnace.x, furnace.y) < 70)
@@ -64,11 +66,33 @@ if(mouse_check_button(mb_left))
 			inventory_set_item(inventory, selected_inventory, noone);
 		}
 	}
+	else if(usedItem == Items.FURNACE)
+	{
+		var en = instance_place(mouse_x, mouse_y, oEntity);
+		if(en == noone)
+		{
+			var tile_pos = world_to_tile_pos(mouse_x, mouse_y);
+			var tile = world_get_tile(tile_pos[0], tile_pos[1]);
+			
+			if(tile == 0)
+			{
+				instance_create_depth(mouse_x, mouse_y, 1, oFurnace);
+				inventory_set_item(inventory, selected_inventory, noone);
+			}
+		}
+	}
 }
 
 if(keyboard_check_released(ord("C")))
 {
-	instance_create_depth(0, 0, -99999, oCraftingMenu);	
+	if(instance_exists(oCraftingMenu))
+		instance_destroy(oCraftingMenu);
+	else
+	{
+	var _xx = camera_get_view_x(view_camera[0]) + 45;
+	var _yy = camera_get_view_y(view_camera[0]) + 60;
+	instance_create_depth(_xx, _yy, 2, oCraftingMenu);	
+	}
 }
 
 if(keyboard_check_pressed(ord("Q")))
@@ -79,5 +103,8 @@ if(keyboard_check_pressed(ord("Q")))
 		var item = spawn_item_entity(x, y, 0, curr);
 		item.pickup_delay = 60;
 		inventory_set_item(inventory, selected_inventory, noone);
+		
+		var snd = audio_play_sound(slide1, 0, false);
+		audio_sound_pitch(snd, 0.5 + random_range(0, 1.5));
 	}
 }

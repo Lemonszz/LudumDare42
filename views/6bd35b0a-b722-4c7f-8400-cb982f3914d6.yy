@@ -8,7 +8,8 @@
         "b19a862c-d450-4bbb-9805-4e0d1e6e6144",
         "170e68f3-956d-47e0-bd26-ff4f948c0632",
         "0ad6807a-d84d-48ff-b5c6-c5f7a5bf5cb8",
-        "100c05a2-9917-43c7-8934-01ff7c67000e"
+        "100c05a2-9917-43c7-8934-01ff7c67000e",
+        "aa345387-cece-4317-8127-b891a53b1187"
     ],
     "filterType": "GMScript",
     "folderName": "inventory",

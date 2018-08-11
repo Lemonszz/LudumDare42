@@ -13,4 +13,7 @@ repeat(10)
 	}
 	
 	effect_sceenshake(20, 0.25);
+	
+	var snd = audio_play_sound(hit1, 0, false);
+	audio_sound_pitch(snd, 0.7 + irandom_range(0, 0.5));
 }
